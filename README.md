@@ -1,1 +1,1 @@
-# just another shopping site
+# Just another shopping site
