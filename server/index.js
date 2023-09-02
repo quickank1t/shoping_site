@@ -1,4 +1,3 @@
-/* eslint-disable no-undef */
 import express from "express";
 import "dotenv/config";
 
