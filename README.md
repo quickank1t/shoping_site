@@ -6,6 +6,6 @@
 
 user management -  Cleark
 db- sql 
-deployment- vercel
+deployment- render
 loggin- aximo
 
