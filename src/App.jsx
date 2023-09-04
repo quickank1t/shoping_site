@@ -4,8 +4,15 @@ import Header from "./Components/Header";
 import Footer from "./Components/Footer";
 import Cart from "./Components/Cart";
 import Error from "./Components/Error";
-
+import { ClerkProvider } from "@clerk/clerk-react";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
+
+if (!process.env.REACT_APP_CLERK_PUBLISHABLE_KEY) {
+	throw new Error("Missing Key");
+}
+
+const clerkKey = process.env.REACT_APP_CLERK_PUBLISHABLE_KEY;
+
 function App() {
 	const router = createBrowserRouter([
 		{
@@ -24,9 +31,11 @@ function App() {
 	]);
 	return (
 		<div>
-			<Header />
-			<RouterProvider router={router} />
-			<Footer />
+			<ClerkProvider publishableKey={clerkKey}>
+				<Header />
+				<RouterProvider router={router} />
+				<Footer />
+			</ClerkProvider>
 		</div>
 	);
 }
