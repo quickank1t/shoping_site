@@ -1,9 +1,8 @@
 import {
-	ClerkProvider,
 	SignedIn,
 	SignedOut,
-	UserButton,
-	useUser,
+	// UserButton,
+	// useUser,
 	RedirectToSignIn,
 } from "@clerk/clerk-react";
 

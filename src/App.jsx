@@ -5,7 +5,11 @@ import Footer from "./Components/Footer";
 import Cart from "./Components/Cart";
 import Error from "./Components/Error";
 import { ClerkProvider } from "@clerk/clerk-react";
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import {
+	createBrowserRouter,
+	RouterProvider,
+	useNavigate,
+} from "react-router-dom";
 
 if (!process.env.REACT_APP_CLERK_PUBLISHABLE_KEY) {
 	throw new Error("Missing Key");
@@ -14,6 +18,7 @@ if (!process.env.REACT_APP_CLERK_PUBLISHABLE_KEY) {
 const clerkKey = process.env.REACT_APP_CLERK_PUBLISHABLE_KEY;
 
 function App() {
+	const navigate = useNavigate();
 	const router = createBrowserRouter([
 		{
 			path: "/",
@@ -31,7 +36,10 @@ function App() {
 	]);
 	return (
 		<div>
-			<ClerkProvider publishableKey={clerkKey}>
+			<ClerkProvider
+				publishableKey={clerkKey}
+				navigate={(to) => navigate(to)}
+			>
 				<Header />
 				<RouterProvider router={router} />
 				<Footer />
