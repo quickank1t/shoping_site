@@ -1,5 +1,5 @@
 function App() {
-  return <>dec</>;
+  return <>dec 1</>;
 }
 
 export default App;
