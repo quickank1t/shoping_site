@@ -1,24 +1,21 @@
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import Header from "./Components/Header";
-import Footer from "./Components/Footer";
-import Body from "./Components/Body";
-import Signup from "./Components/Signup";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import { Layout } from "./Components";
+import { Home, SignUp, Profile, NotFound, Cart } from "./page/index.js";
+
 function App() {
-  const router = createBrowserRouter([
-    {
-      path: "/",
-      element: <Body />,
-    },
-    {
-      path: "/signup",
-      element: <Signup />,
-    },
-  ]);
   return (
     <div>
-      <Header />
-      <RouterProvider router={router} />
-      <Footer />
+      <Router>
+        <Routes>
+          <Route path="/" element={<Layout />}>
+            <Route index element={<Home />} />
+            <Route path="signup" element={<SignUp />} />
+            <Route path="cart" element={<Cart />} />
+            <Route path="profile" element={<Profile />} />
+            <Route path="*" element={<NotFound />} />
+          </Route>
+        </Routes>
+      </Router>
     </div>
   );
 }
