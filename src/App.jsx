@@ -1,7 +1,7 @@
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import { Layout } from "./Components";
 import { Home, SignUp, Profile, NotFound, Cart } from "./page/index.js";
-
+// TODO : Auth0 for Auth
 function App() {
   return (
     <div>
