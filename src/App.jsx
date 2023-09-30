@@ -1,6 +1,7 @@
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import { Layout } from "./Components";
 import { Home, SignUp, Profile, NotFound, Cart } from "./page/index.js";
+import Login from "./page/Login";
 // TODO : Auth0 for Auth
 function App() {
   return (
@@ -10,6 +11,8 @@ function App() {
           <Route path="/" element={<Layout />}>
             <Route index element={<Home />} />
             <Route path="signup" element={<SignUp />} />
+            <Route path="login" element={<Login />} />
+
             <Route path="cart" element={<Cart />} />
             <Route path="profile" element={<Profile />} />
             <Route path="*" element={<NotFound />} />
