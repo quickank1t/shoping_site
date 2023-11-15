@@ -20,7 +20,9 @@ export default function Header() {
             <div className="relative flex h-16 items-center justify-between">
               <MobileHamburger open={open} />
               <BrowserNavigation navigation={navigation} />
-              <CartAndProfile />
+              <div>
+                <CartAndProfile />
+              </div>
             </div>
           </div>
           <MobileNavigation navigation={navigation} />
