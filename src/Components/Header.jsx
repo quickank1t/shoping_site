@@ -6,6 +6,8 @@ import {
   BrowserNavigation,
 } from "./navbar";
 
+import { SignOutButton, RedirectToSignIn } from "@clerk/clerk-react";
+
 const navigation = [
   { name: "Home", href: "/", current: true },
   { name: "Profile", href: "/profile", current: false },
@@ -20,7 +22,9 @@ export default function Header() {
             <div className="relative flex h-16 items-center justify-between">
               <MobileHamburger open={open} />
               <BrowserNavigation navigation={navigation} />
-              <CartAndProfile />
+              <div>
+                <CartAndProfile />
+              </div>
             </div>
           </div>
           <MobileNavigation navigation={navigation} />

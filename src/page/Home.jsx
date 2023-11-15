@@ -13,11 +13,12 @@ export default function Home() {
   const clerkPubKey = import.meta.env.VITE_APP_CLERK_PUBLISHABLE_KEY;
 
   return (
-    <ClerkProvider publishableKey={clerkPubKey}>
-      <SignedIn>Hello SignedIn</SignedIn>
-      <SignedOut>
-        <RedirectToSignIn />
-      </SignedOut>
-    </ClerkProvider>
+    // <ClerkProvider publishableKey={clerkPubKey}>
+    //   <SignedIn>Hello SignedIn</SignedIn>
+    //   <SignedOut>
+    //     <RedirectToSignIn />
+    //   </SignedOut>
+    // </ClerkProvider>
+    <>Hello</>
   );
 }
