@@ -6,8 +6,6 @@ import {
   BrowserNavigation,
 } from "./navbar";
 
-import { SignOutButton, RedirectToSignIn } from "@clerk/clerk-react";
-
 const navigation = [
   { name: "Home", href: "/", current: true },
   { name: "Profile", href: "/profile", current: false },

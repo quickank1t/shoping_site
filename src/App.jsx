@@ -1,13 +1,7 @@
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import { Layout } from "./Components";
 import { Home, SignUp, Profile, NotFound, Cart } from "./page/index.js";
-import {
-  SignedIn,
-  SignedOut,
-  UserButton,
-  useUser,
-  RedirectToSignIn,
-} from "@clerk/clerk-react";
+import { SignedIn, SignedOut } from "@clerk/clerk-react";
 function App() {
   return (
     <div>
